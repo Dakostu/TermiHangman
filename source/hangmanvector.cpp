@@ -26,8 +26,8 @@ HangmanVector::HangmanVector(string file) {
     
     // Read only letters from the English alphabet
     for (int i = 0; i < currentWord.length(); ++i)
-	    if (currentWord[i] >= 'A' && currentWord[i] <= 'Z'	
-            || currentWord[i] >= 'a' && currentWord[i] <= 'z')
+	    if ((currentWord[i] >= 'A' && currentWord[i] <= 'Z')	
+            || (currentWord[i] >= 'a' && currentWord[i] <= 'z'))
 		       vec.push_back(HangmanChar(currentWord[i]));	
         
     if (!vec.size()) {
