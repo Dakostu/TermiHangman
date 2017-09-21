@@ -8,4 +8,4 @@ Only letters from the English alphabet are read, so I recommend you use text fil
 
 To launch this program, type: "./termihangman [FILE NAME]"
 
-I hope you find this as enjoyable as I do.
+I hope you find this as enjoyable as I do. Have fun-
