@@ -8,8 +8,7 @@
 
 using namespace std;
     
-int main(int argc, char** argv) {
-        
+int main(int argc, char** argv) {        
 	if (argc == 1) {
 		cout << "Need an argument" << endl;
 		return 1;
@@ -25,8 +24,7 @@ int main(int argc, char** argv) {
     
 	while (!wordToGuess.isGuessed()) {
         
-        printf("\033c"); // clear terminal screen at every new try
-        
+        printf("\033c"); // clear terminal screen at every new try        
         
         cout << "*** TERMI-HANGMAN ***" << endl;
         cout << response << endl; 
@@ -63,7 +61,6 @@ int main(int argc, char** argv) {
         
 	}
 	return 0;
-
 }
 
 

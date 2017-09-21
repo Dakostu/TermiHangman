@@ -34,7 +34,6 @@ HangmanVector::HangmanVector(string file) {
         cerr << "No usable words found." << endl;
         exit(1);
     }
-    
 }
 
 
@@ -62,7 +61,6 @@ string HangmanVector::reveal() {
     for (it = vec.begin(); it != vec.end(); ++it)
 		ss << it->reveal();
 	return ss.str();
-    
 }
 
 string HangmanVector::toString() {

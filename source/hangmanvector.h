@@ -8,9 +8,7 @@
 #include "hangmanchar.h"
 #include <vector>
 
-
 class HangmanVector {
-    
     std::vector<HangmanChar> vec;
     std::vector<HangmanChar>::iterator it;
     
@@ -19,8 +17,7 @@ class HangmanVector {
     bool isGuessed();    
     bool WordContains(const char c);
     std::string reveal();
-    std::string toString();
-    
+    std::string toString();    
 };
 
 #endif
