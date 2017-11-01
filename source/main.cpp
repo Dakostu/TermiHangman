@@ -10,7 +10,7 @@ using namespace std;
     
 int main(int argc, char** argv) {        
 	if (argc == 1) {
-		cout << "Need an argument" << endl;
+		cout << "Need a filename as an argument" << endl;
 		return 1;
 	}
 	
