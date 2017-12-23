@@ -11,25 +11,16 @@ HangmanChar::HangmanChar(const char c) {
 	guessed = false;
 }
 
-char HangmanChar::reveal() { return letter; }
+const char HangmanChar::reveal() { return letter; }
 
 bool HangmanChar::isCorrect(const char p) { 
-	if (tolower(p) == letter || toupper(p) == letter) 
-		return guessed = true;
-	else
-		return false;
+    return (tolower(p) == letter || toupper(p) == letter) 
+                ? guessed = true : false;
 }
 
 bool HangmanChar::isGuessed() { return guessed; }
 		
 string HangmanChar::toString() {
-    stringstream str;
-    
-    if (guessed)
-        str << letter;        
-    else
-        str << "_";        
-    
-    return str.str();
+    return (guessed) ? string(1,letter) : "_";
 }
  

@@ -13,7 +13,7 @@ class HangmanChar {
 	
 	public:
     HangmanChar(const char c);
-	char reveal();
+	const char reveal();
 	bool isCorrect(const char p);
     bool isGuessed();
 	std::string toString();

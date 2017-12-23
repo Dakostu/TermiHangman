@@ -47,10 +47,9 @@ bool HangmanVector::isGuessed() {
 
 bool HangmanVector::WordContains(const char c) {
     bool contains = false;
-    for (it = vec.begin();
-        it != vec.end(); ++it) 
-            if (it->isCorrect(c))
-                 contains = true;
+    for (it = vec.begin(); it != vec.end(); ++it) 
+        if (it->isCorrect(c))
+            contains = true;
         
     return contains;
         
