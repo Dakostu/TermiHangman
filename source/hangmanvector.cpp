@@ -39,7 +39,7 @@ HangmanVector::HangmanVector(string file) {
 
 bool HangmanVector::isGuessed() {
     for (it = vec.begin(); it != vec.end(); ++it)
-        if (it->isGuessed() == false)
+        if (!it->isGuessed())
              return false;
          
     return true;    
