@@ -6,7 +6,7 @@ A terminal hangman game made in C++
 This program allows you to play hangman with a word that is randomly chosen from a text file you specified. 
 
 # Build program
-Simply type "make".
+Simply type "make" in the CLI of the project folder.
 
 # Launch program
 To launch this program, type: "./termihangman [FILE NAME]".
