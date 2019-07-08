@@ -3,7 +3,6 @@
 // found in the LICENSE file.
 
 #include "hangmanchar.h"
-#include <sstream>
 using namespace std;
 
 HangmanChar::HangmanChar(const char c) {

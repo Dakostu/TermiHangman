@@ -5,11 +5,7 @@
 #include "hangmanvector.h"
 #include <algorithm>
 #include <iostream>
-#include <random>
-#include <iterator>
 #include <fstream>
-#include <cctype>
-#include <ctime>
 #include <sstream>
 
 using namespace std;

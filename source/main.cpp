@@ -43,7 +43,7 @@ int main(int argc, char** argv) {
         }
         cout << endl;
         
-        enteredTries.insert(toupper(input));
+        enteredTries.emplace(toupper(input));
 
         if (!tries) {
             cout << "--- YOU DIED ---" << endl;
