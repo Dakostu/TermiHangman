@@ -13,7 +13,7 @@ HangmanChar::HangmanChar(const char c) {
 
 const char HangmanChar::reveal() { return letter; }
 
-bool HangmanChar::isCorrect(const char p) { 
+bool HangmanChar::isCorrect(const char &p) { 
     return (tolower(p) == letter || toupper(p) == letter) 
                 ? guessed = true : false;
 }
