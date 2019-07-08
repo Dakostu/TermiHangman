@@ -1,5 +1,5 @@
 # TermiHangman
-A terminal hangman game made in C++
+A terminal hangman game made in C++17
 
 ![preview pic](https://raw.githubusercontent.com/Dakostu/TermiHangman/master/preview.png)
 
