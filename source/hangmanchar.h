@@ -17,6 +17,7 @@ class HangmanChar {
 	bool isCorrect(const char &p);
     bool isGuessed();
 	std::string toString();
+    bool operator==(const char &c);
 };
 
 #endif

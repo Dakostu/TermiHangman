@@ -23,3 +23,6 @@ string HangmanChar::toString() {
     return (guessed) ? string(1,letter) : "_";
 }
  
+bool HangmanChar::operator==(const char &c) {
+    return this->isCorrect(c);
+}
