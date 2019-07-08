@@ -40,8 +40,12 @@ bool HangmanVector::isGuessed() {
     return (all_of(vec.begin(), vec.end(), [this](HangmanChar &hangC) { return hangC.isGuessed(); }));
 }
 
-bool HangmanVector::WordContains(const char &c) {
-    return any_of(vec.begin(), vec.end(), [this, c](HangmanChar &hangC) { return hangC.isCorrect(c); });
+bool HangmanVector::WordContains(const char &checkChar) {
+    auto wordContainsChar = false;    
+    for_each(vec.begin(), vec.end(), [this, checkChar, &wordContainsChar](HangmanChar &hangC) { 
+        if (hangC == checkChar) { wordContainsChar = true;}         
+    });
+    return wordContainsChar;
 }
 
 string HangmanVector::reveal() {
