@@ -20,7 +20,6 @@ int main(int argc, char** argv) {
     
     // This set displays all letters that have been already entered
     set<char> enteredTries;
-    set<char>::iterator sIt;
     
 	while (!wordToGuess.isGuessed()) {
         
