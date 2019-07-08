@@ -1,34 +1,37 @@
 // Daniel Kostuj, 2017
 // Use of this source code is governed by the license that can be
 // found in the LICENSE file.
+#include "GrabBag.h"
 #include "hangmanvector.h"
+#include <algorithm>
 #include <iostream>
+#include <random>
+#include <iterator>
 #include <fstream>
+#include <cctype>
 #include <ctime>
 #include <sstream>
 
 using namespace std;
 
 HangmanVector::HangmanVector(string file) {	
-    // save words from file into a vector
+    // save words from file into a GrabBag
 	ifstream fin(file);
-    vector<string> words;
+    GrabBag<string> words;
     string currentWord;
     while (fin >> currentWord)
-        words.push_back(currentWord);
+        words.insert(currentWord);
     if (!words.size()) {
         cerr << "File is empty." << endl;
         exit(1);
     }
     
-    srand(time(0));
-    currentWord = words.at(rand()%words.size());
+    currentWord = words.grab();
     
     // Read only letters from the English alphabet
-    for (int i = 0; i < currentWord.length(); ++i)
-	    if ((currentWord[i] >= 'A' && currentWord[i] <= 'Z')	
-            || (currentWord[i] >= 'a' && currentWord[i] <= 'z'))
-		       vec.push_back(HangmanChar(currentWord[i]));	
+    copy_if(currentWord.begin(), currentWord.end(), back_inserter(vec), [this](const char c) { 
+        return isalpha(c);
+    });
         
     if (!vec.size()) {
         cerr << "No usable words found." << endl;
