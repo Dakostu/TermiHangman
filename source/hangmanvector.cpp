@@ -6,7 +6,6 @@
 #include <algorithm>
 #include <iostream>
 #include <fstream>
-#include <sstream>
 
 using namespace std;
 
@@ -49,17 +48,19 @@ bool HangmanVector::WordContains(const char &checkChar) {
 }
 
 string HangmanVector::reveal() {
-    stringstream ss;
-    for (auto it = vec.begin(); it != vec.end(); ++it)
-		ss << it->reveal();
-	return ss.str();
+    string revealedWord;
+    transform(vec.begin(), vec.end(), back_inserter(revealedWord), [this](HangmanChar &c) {
+        return c.reveal();
+    });
+    return revealedWord;
 }
 
 string HangmanVector::toString() {
-    stringstream str;
-	for (auto it = vec.begin(); it != vec.end(); ++it)
-		str << it->toString();
-	return str.str();
+    string vectorString;
+    transform(vec.begin(), vec.end(), back_inserter(vectorString), [this](HangmanChar c) {
+        return c.toString();
+    });
+    return vectorString;
 }
     
 
