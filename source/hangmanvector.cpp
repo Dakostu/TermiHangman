@@ -41,33 +41,23 @@ HangmanVector::HangmanVector(string file) {
 
 
 bool HangmanVector::isGuessed() {
-    for (it = vec.begin(); it != vec.end(); ++it)
-        if (!it->isGuessed())
-             return false;
-         
-    return true;    
+    return (all_of(vec.begin(), vec.end(), [this](HangmanChar &hangC) { return hangC.isGuessed(); }));
 }
 
-bool HangmanVector::WordContains(const char c) {
-    bool contains = false;
-    for (it = vec.begin(); it != vec.end(); ++it) 
-        if (it->isCorrect(c))
-            contains = true;
-        
-    return contains;
-        
+bool HangmanVector::WordContains(const char &c) {
+    return any_of(vec.begin(), vec.end(), [this, c](HangmanChar &hangC) { return hangC.isCorrect(c); });
 }
 
 string HangmanVector::reveal() {
     stringstream ss;
-    for (it = vec.begin(); it != vec.end(); ++it)
+    for (auto it = vec.begin(); it != vec.end(); ++it)
 		ss << it->reveal();
 	return ss.str();
 }
 
 string HangmanVector::toString() {
     stringstream str;
-	for (it = vec.begin(); it != vec.end(); ++it)
+	for (auto it = vec.begin(); it != vec.end(); ++it)
 		str << it->toString();
 	return str.str();
 }
