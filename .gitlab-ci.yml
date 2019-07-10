@@ -1,0 +1,8 @@
+stages:
+    - c++17-build
+    - unit-test
+    
+
+make-c++17:
+    stage: c++17-build
+    script: make
