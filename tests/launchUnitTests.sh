@@ -1,1 +1,1 @@
-g++ UnitTests.cpp -o UnitTests && ./UnitTests -std=c++17
+g++ UnitTests.cpp ../source/hangmanchar.cpp -o UnitTests -std=c++17 && ./UnitTests
