@@ -16,6 +16,7 @@ class HangmanChar {
 	const char reveal();
 	bool isCorrect(const char &p);
     bool isGuessed();
+    const char toChar();
 	std::string toString();
     bool operator==(const char &c);
 };

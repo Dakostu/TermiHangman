@@ -1,0 +1,17 @@
+stages:
+    - c++17-build
+    - unit-test
+    
+
+make-c++17:
+    stage: c++17-build
+    script: make
+    
+
+    
+hangman-char-unit-tests:
+    stage: unit-test
+    script: 
+            - cd tests
+            - g++ HangmanCharUnitTests.cpp ../source/hangmanchar.cpp
+            - ./a.out
