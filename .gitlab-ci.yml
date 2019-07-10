@@ -9,9 +9,9 @@ make-c++17:
     
 
     
-hangman-char-unit-tests:
+catch-unit-tests:
     stage: unit-test
     script: 
             - cd tests
-            - g++ HangmanCharUnitTests.cpp ../source/hangmanchar.cpp
+            - g++ UnitTests.cpp ../source/hangman*.cpp
             - ./a.out
