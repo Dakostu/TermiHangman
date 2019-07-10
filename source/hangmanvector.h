@@ -12,9 +12,9 @@ class HangmanVector {
     std::vector<HangmanChar> vec;
     
     public:
-    HangmanVector(std::string file);
+    HangmanVector(const std::string &word);
     bool isGuessed();    
-    bool WordContains(const char &c);
+    bool wordContains(const char &c);
     std::string reveal();
     std::string toString();    
 };
