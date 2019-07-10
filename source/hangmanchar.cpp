@@ -18,7 +18,12 @@ bool HangmanChar::isCorrect(const char &p) {
 }
 
 bool HangmanChar::isGuessed() { return guessed; }
-		
+
+
+const char HangmanChar::toChar() {
+    return (guessed) ? letter : '_';
+}
+
 string HangmanChar::toString() {
     return (guessed) ? string(1,letter) : "_";
 }

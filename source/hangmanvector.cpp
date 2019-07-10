@@ -57,8 +57,8 @@ string HangmanVector::reveal() {
 
 string HangmanVector::toString() {
     string vectorString;
-    transform(vec.begin(), vec.end(), back_inserter(vectorString), [this](HangmanChar c) {
-        return c.toString();
+    transform(vec.begin(), vec.end(), back_inserter(vectorString), [this](HangmanChar &c) {
+        return c.toChar();
     });
     return vectorString;
 }
